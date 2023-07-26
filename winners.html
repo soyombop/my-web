@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>winners</title>
+    <link rel="stylesheet" href="dhdhdh.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      h1 {
+        display: flex;
+        justify-content: center;
+      }
+
+      a {
+        color: black;
+        text-decoration: none;
+        margin: 0 50px;
+        justify-content: flex-end;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial;
+        font-size: 17px;
+      }
+
+      #myVideo {
+        /* position: fixed; */
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+      }
+      .full-screen {
+        /* position: fixed; */
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      .background {
+        position: fixed;
+      }
+
+      .content {
+        position: fixed;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 100%;
+        padding: 20px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+
+      #myBtn {
+        width: 200px;
+        font-size: 18px;
+        padding: 10px;
+        border: none;
+        background: #000;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      #myBtn:hover {
+        background: #ddd;
+        color: black;
+      }
+      .text-container {
+        z-index: 50;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text-container">
+      <a href="./">Home</a>
+
+      <a href="./video.html">Video</a>
+      <a href="./winners.html">Winners</a>
+    </div>
+    <nav class="navbar">
+      <ul class="nav-list"></ul>
+    </nav>
+    <video autoplay muted loop id="myVideo">
+      <source src="fifa_world_cup_qatar_2022_-_the_final_hype (720p).mp4" -- />
+      type="" /> Your browser does not support HTML5 video. -->
+    </video>
+
+    <div class="content">
+      <button id="myBtn" onclick="myFunction()">Pause</button>
+    </div>
+
+    <script>
+      var video = document.getElementById("myVideo");
+      var btn = document.getElementById("myBtn");
+
+      function myFunction() {
+        if (video.paused) {
+          video.play();
+          btn.innerHTML = "Pause";
+        } else {
+          video.pause();
+          btn.innerHTML = "Play";
+        }
+      }
+    </script>
+  </body>
+</html>
